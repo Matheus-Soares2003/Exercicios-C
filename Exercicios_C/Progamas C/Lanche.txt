@@ -1,0 +1,36 @@
+int main(void){
+
+    int codigo, quant;
+    float preco;
+
+    preco = 0;
+
+    scanf("%d%d", &codigo, &quant);
+
+
+    switch (codigo){
+        case 1:
+            preco = quant * 4;
+            break;
+        case 2:
+            preco = quant * 4.50;
+            break;
+        case 3:
+            preco = quant * 5;
+            break;
+        case 4:
+            preco = quant * 2;
+            break;
+        case 5:
+            preco = quant * 1.50;
+            break;
+        default:
+            printf("Código Inválido!");
+        break;
+    }
+
+    printf("Total: R$ %.2f\n", preco);
+
+    return 0;
+
+}

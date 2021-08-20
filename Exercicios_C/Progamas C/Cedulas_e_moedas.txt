@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+int main(void){
+
+    int n100, n50, n20, n10, n5, n2, z, aux;
+    int m1, m050, m025, m010, m005, m001;
+    double x;
+
+    scanf("%lf", &x);
+
+    //pegando a parte inteira
+    z = x;
+
+    n100 = (z / 100);   aux = z % 100;
+    n50 = (aux / 50);   aux = aux % 50;
+    n20 = (aux / 20);   aux = aux % 20;
+    n10 = (aux / 10);   aux = aux % 10;
+    n5 = (aux / 5);     aux = aux % 5;
+    n2 = (aux / 2);     aux = aux % 2;
+    m1 = (aux / 1);     aux = aux % 1;
+
+    //pegando a parte fracionaria e transformando em inteiro
+    x = x - z;
+    aux = x * 100;
+
+    m050 = (aux / 50);      aux = aux % 50;
+    m025 = (aux / 25);      aux = aux % 25;
+    m010 = (aux / 10);      aux = aux % 10;
+    m005 = (aux / 5);       aux = aux % 5;
+    m001 = (aux / 1);       aux = aux % 1;
+
+    printf("NOTAS:\n");
+    printf("%d nota(s) de R$ 100.00\n", n100);
+    printf("%d nota(s) de R$ 50.00\n", n50);
+    printf("%d nota(s) de R$ 20.00\n", n20);
+    printf("%d nota(s) de R$ 10.00\n", n10);
+    printf("%d nota(s) de R$ 5.00\n", n5);
+    printf("%d nota(s) de R$ 2.00\n", n2);
+   
+   printf("MOEDAS:\n");
+   printf("%d moeda(s) de R$ 1.00", m1);
+   printf("\n%d moeda(s) de R$ 0.50", m050);
+   printf("\n%d moeda(s) de R$ 0.25", m025);
+   printf("\n%d moeda(s) de R$ 0.10", m010);
+   printf("\n%d moeda(s) de R$ 0.05", m005);
+   printf("\n%d moeda(s) de R$ 0.01\n", m001);
+
+    
+    return 0;
+
+}
+
+
+

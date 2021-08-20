@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main(void){
+    
+    float v[6], media, soma;
+    int i, cont;
+    soma = 0;
+    cont = 0;
+
+    for(i = 0; i < 6; i++){
+        scanf("%f", &v[i]);
+        if (v[i] > 0){
+            cont++;
+            soma = soma + v[i];
+        }
+    }
+
+    media = soma / cont;
+
+    printf("\n%d valores positivos", cont);
+    printf("\n%.1f", media);
+    printf("\n");
+
+    return 0;
+}

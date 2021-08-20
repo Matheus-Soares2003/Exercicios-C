@@ -1,0 +1,33 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+    int escolha, contAlcool = 0, contGas = 0, contDiesel = 0;
+
+    do{
+        scanf("%d", &escolha);
+        if (escolha <= 4 && escolha >= 1){
+            switch(escolha){
+                case 1:
+                    contAlcool++;
+                    break;
+                case 2:
+                    contGas++;
+                    break;
+                case 3:
+                    contDiesel++;
+                    break;
+                break;
+            } 
+            
+        }
+     
+    } while (escolha != 4);
+
+    printf("MUITO OBRIGADO\n");
+    printf("Alcool: %d\n", contAlcool);
+    printf("Gasolina: %d\n", contGas);
+    printf("Diesel: %d\n", contDiesel);
+ 
+    return 0;
+}

@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(void){
+    
+    int N, i, contin, contout;
+    contin = 0;
+    contout = 0;
+    scanf("%d", &N);
+    int X[N];
+
+    for (i = 0; i < N; i++){
+        scanf("%d", &X[i]);
+        if (X[i] >= 10 && X[i] < 20){
+            contin++;
+        } else {
+            contout++;
+        }
+    }
+
+    printf("%d in\n", contin);
+    printf("%d out\n", contout);
+
+    return 0;
+}

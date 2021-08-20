@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(void){
+
+    float a, b, c, delta, raiz1, raiz2;
+
+    scanf("%f%f%f", &a, &b, &c);
+
+    delta = pow(b, 2) - 4 * a * c;
+
+    if (a == 0 || delta < 0){
+        printf("Ímpossivel calcular");
+    } else {
+        raiz1 = (-b + sqrt(delta)) / (2 * a);
+        raiz2 = (-b - sqrt(delta)) / (2 * a);
+        printf("R1 = %.5f\n", raiz1);
+        printf("R2 = %.5f", raiz2);
+    }
+
+    printf("\n");
+
+
+    return 0;
+
+}

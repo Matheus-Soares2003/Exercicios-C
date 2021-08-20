@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main(void){
+    
+    int i, num, a6;
+    scanf("%d", &num);
+
+    a6 = num + (5 * 2);
+    if (a6 % 2 == 0){
+        a6++;
+    }
+    printf("\n");
+
+    if (num % 2 == 0){
+        num++;
+    }
+
+    for(i = num; i <= a6; i+= 2){
+        printf("%d\n", i);
+    }
+    
+     printf("\n");
+
+    return 0;
+}

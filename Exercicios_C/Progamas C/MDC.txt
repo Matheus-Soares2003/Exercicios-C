@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    
+    int N, i, num1, num2, maior = 0, menor = 0, aux, MDC;
+
+    scanf("%d", &N);
+
+    for (i = 0; i < N; i++){
+        
+        scanf("%d %d", &num1, &num2);
+        maior = (num1 + num2 + abs(num1 - num2)) / 2;
+        menor = (num1 + num2 - abs(num1 - num2)) / 2;
+
+        do {
+
+            MDC = maior % menor; 
+            if (MDC == 0){
+                MDC = menor; 
+                aux = 0;
+                printf("%d\n", MDC);
+            } else {
+                aux = MDC; 
+                maior = menor; 
+                menor = aux; 
+            }
+        
+        } while (aux != 0);
+
+        maior = 0;
+        menor = 0;
+
+    }
+
+    return 0;
+
+}

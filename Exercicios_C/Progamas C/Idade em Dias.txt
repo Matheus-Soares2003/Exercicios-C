@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void){
+
+    int idade, dia, mes, ano;
+
+    ano = 0;
+    mes = 0;
+
+    scanf("%d", &idade);
+
+    if (idade >= 365){
+        ano = idade / 365;
+        idade = idade % 365;
+    }
+
+    if (idade >= 30){
+        mes = idade / 30;
+        idade = idade % 30;
+    }
+
+    printf("%d ano(s)", ano);
+    printf("\n%d mes(es)", mes);
+    printf("\n%d dia(s)\n", idade);
+
+    return 0;
+
+}

@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void){
+
+    int codigo1, codigo2, num1, num2;
+    float valUnit1, valUnit2, Total;
+
+    scanf("%d%d%f", &codigo1, &num1, &valUnit1);
+    scanf("%d%d%f", &codigo2, &num2, &valUnit2);
+
+    Total = (valUnit1 * num1) + (valUnit2  * num2);
+
+    printf("\nVALOR A PAGAR: R$ %.2f", Total);
+
+    return 0;
+
+}

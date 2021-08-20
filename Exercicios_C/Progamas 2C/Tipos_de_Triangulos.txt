@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <math.h>
+#define TAM 3
+ 
+int main() {
+ 
+    double A, B, C, aux, ordem[TAM];
+    int i, cont;
+
+    for (i = 0; i < TAM; i++){
+        scanf("%lf", &ordem[i]);
+    }
+
+    for (cont = 1; cont < TAM; cont++){
+        for (i = 0; i < TAM - 1; i++){
+            if (ordem[i] < ordem[i + 1]){
+                aux = ordem[i];
+                ordem[i] = ordem[i + 1];
+                ordem[i + 1] = aux;
+            }
+        }
+    }
+
+    A = ordem[0];
+    B = ordem[1];
+    C = ordem[2];
+
+    if (A >= B + C){
+        printf("NAO FORMA TRIANGULO\n");
+    } else {
+        if (pow(A, 2) == pow(B, 2) + pow(C, 2)){
+        printf("TRIANGULO RETANGULO\n");
+        } else if (pow(A, 2) > pow(B, 2) + pow(C, 2)){
+        printf("TRIANGULO OBTUSANGULO\n");
+        } else if (pow(A, 2) < pow(B, 2) + pow(C, 2)){
+        printf("TRIANGULO ACUTANGULO\n");
+        }
+
+        if (A == B && B == C){
+            printf("TRIANGULO EQUILATERO\n");
+        } else if ((A == B && B != C) || (B == C && B != A) || (A == C && A != B)){
+            printf("TRIANGULO ISOSCELES\n");
+        } 
+    }
+ 
+    return 0;
+}

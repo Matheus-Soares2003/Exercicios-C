@@ -1,0 +1,40 @@
+#include <stdio.h>
+#define TAM 3
+
+int main(void){
+
+    int num[TAM], desordem[TAM], i, cont, aux;
+    
+    for (i = 0; i < TAM; i++){
+        scanf("%d", &num[i]);
+        desordem[i] = num[i];
+    }
+
+    for (cont = 1; cont < TAM; cont++){
+        for (i = 0; i < TAM - 1; i++){
+            if (num[i] > num[i + 1]){
+                aux = num[i];
+                num[i] = num[i + 1];
+                num[i + 1] = aux;
+            }
+        }
+    }
+
+    for (i = 0; i < TAM; i++){
+        printf("%d\n", num[i]);
+    }
+    
+    printf("\n");
+    
+    for (i = 0; i < TAM; i++){
+        printf("%d\n", desordem[i]);
+    }
+    
+    
+    
+    return 0;
+
+}
+
+
+

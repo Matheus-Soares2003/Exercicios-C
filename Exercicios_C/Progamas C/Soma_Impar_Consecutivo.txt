@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void){
+    
+    int X, Y, i, maior, menor, soma;
+    scanf("%d", &X);
+    scanf("%d", &Y);
+    soma = 0;
+
+    maior = X;
+    menor = Y;
+
+    if (Y > X){
+        maior = Y;
+        menor = X;
+    }
+
+    for (i = menor; i < maior; i++){
+        if (i % 2 != 0){
+            soma = soma + i;
+        }
+    }
+
+    printf("\n%d", soma);
+    printf("\n");
+
+    return 0;
+}

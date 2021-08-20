@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(void){
+    
+    int N, fat = 1;
+
+    scanf("%d", &N);
+    
+    if (N > 0 && N < 13){
+        do {
+            fat = fat * N;
+            N = N - 1;
+            
+        } while (N > 0);
+        printf("%d\n", fat);
+    }
+    return 0;
+}
+
+
+

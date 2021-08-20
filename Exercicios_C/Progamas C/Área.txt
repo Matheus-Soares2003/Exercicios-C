@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(void){
+
+    double A, B, C, areaTriang, areaCirc, areaTrapz, areaSqr, areaRet;
+
+    scanf("%lf%lf%lf", &A, &B, &C);
+
+    //Área do Triângulo Retângulo
+    areaTriang = A * C / 2;
+
+    //Área do Circulo
+    areaCirc = 3.14159 * C * C;
+
+    //Área do Trapézio
+    areaTrapz = (A + B) * C / 2;
+
+    //Área do Quadrado
+    areaSqr = B * B;
+
+    //Área do Retângulo
+    areaRet = A * B;
+
+    printf("TRIANGULO: %.3lf\n", areaTriang);
+    printf("CIRCULO: %.3lf\n", areaCirc);
+    printf("TRAPEZIO: %.3lf\n", areaTrapz);
+    printf("QUADRADO: %.3lf\n", areaSqr);
+    printf("RETANGULO: %.3lf\n", areaRet);
+
+    return 0;
+
+}

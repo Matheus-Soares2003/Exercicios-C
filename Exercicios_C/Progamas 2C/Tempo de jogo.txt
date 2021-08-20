@@ -1,0 +1,18 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+   int comeco, fim, hora;
+
+    scanf("%d %d", &comeco, &fim);
+
+    if (fim <= comeco) {
+        fim = fim + 24;
+    }
+
+    hora = fim - comeco;
+        
+    printf("O JOGO DUROU %d HORA(S)\n", hora);
+ 
+    return 0;
+}
